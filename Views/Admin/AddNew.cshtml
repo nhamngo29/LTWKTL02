@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2>Thêm Sản phẩm</h2>
+<form action="/Admin/AddNew" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="Name">Nhập tên sản phẩm</label>
+            <input type="text" class="form-control" id="Name" name="Name" placeholder="Tên sản phẩm" />
+        </div>
+        <div class="col-md-6">
+            <label for="Price">Giá sản phẩm</label>
+            <input type="number" class="form-control" id="Price" name="Price" placeholder="Price" />
+        </div>
+        <div class="col-md-6">
+            <label for="Desciption">Chi tiết sản phẩm</label>
+            <input type="text" class="form-control" id="Desciption" name="Desciption" placeholder="Chi tiết sản phẩm" />
+        </div>
+        <div class="col-md-6">
+            <label for="ImageUrl" class="form-label">Default file input example</label>
+            <input class="form-control" type="file" id="ImageUrl" name="ImageUrl">
+        </div>
+        <div class="col-md-6">
+            <label for="CategoryID">Loại sản phẩm</label>
+            <input type="text" class="form-control" id="CategoryID" name="CategoryID" placeholder="Chi tiết sản phẩm" />
+        </div>
+    </div>
+    <button type="submit" class="btn btn-secondary">Tạo</button>
+</form>
+

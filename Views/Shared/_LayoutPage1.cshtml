@@ -1,0 +1,68 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 logo">
+                <a><img class="navbar-brand" src="~/Assets/Img/logo/logo.png" /></a>
+            </div>
+            <div class="col-4">
+                <p>
+                    <strong>Hà Nội:</strong> <br />
+                    Điện thoại: 024.73007.008 - 093.4647.172<br />
+                    Địa chỉ: Số 63/445 Lạc Long Quân, Tây Hồ, Hà Nội<br />
+                    Email: hn@dienhoa24gio.com
+                </p>
+            </div>
+            <div class="col-4">
+                <p>
+                    <strong>TP.Hồ Chí Minh:</strong><br />
+                    Điện thoại: 028.73007.008 - 094.7723.444<br />
+                    Địa chỉ: Số 140 Phan Đình Phùng, P.2, Q.Phú Nhuận<br />
+                    Email: hcm@dienhoa24gio.com
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #96B014;">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Index">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Products/Index">Sản phẩm</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-10">
+                @RenderBody()
+            </div>
+            <div class="col-2">
+                @RenderSection("SideBar",required:false)
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+</body>
+</html>

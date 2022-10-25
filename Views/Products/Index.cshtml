@@ -1,0 +1,39 @@
+﻿@model List<KT2_2001207130_26.Models.Product>
+@{
+    ViewBag.Title = "Index";
+}
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="/Products/index/1">Giá:Thấp đến cao</a></li>
+        <li><a class="dropdown-item" href="/Products/index/2">Giá:Cao đến thấp</a></li>
+    </ul>
+</div>
+<div class="row row-cols-3 row-cols-md-4 g-4 p-3">
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: 19rem; margin:10px;">
+            <img src="~/Assets/Img/Products/@item.ImgageUrl" class="card-img-top" alt="@item.Name">
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <p class="card-text">Giá: <span style="color:red;">@item.Price.Value.ToString("0VND")</span></p>
+                <a href="/Products/Detail/Sort=@item.ID" class="btn btn-primary">Mua hàng</a>
+            </div>
+        </div>
+    }
+</div>
+@section SideBar
+{
+
+    <div class="list-group rounded-0">
+        <button type="button" class="list-group-item list-group-item-action active" aria-current="true" style="background-color: #96B014;">
+            Thương hiệu
+        </button>
+        @foreach (var item in ViewBag.categories)
+        {
+            <a class="list-group-item list-group-item-action btn" href="/Products/index?@item.Name">@item.Name</a>
+        }
+    </div>
+}

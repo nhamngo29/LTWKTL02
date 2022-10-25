@@ -1,0 +1,17 @@
+﻿@model KT2_2001207130_26.Models.Product
+@{
+    ViewBag.Title = "Detail";
+}
+<h3>Hoa @Model.Name</h3>
+<div class="row">
+    <div class="col-5">
+        <a><img src="~/Assets/Img/Products/@Model.ImgageUrl"/></a>
+    </div>
+    <div class="col-7">
+        <h3>Mã SP: <strong>@Model.ID</strong></h3>
+        <h4>Giá: <strong>@Model.Price</strong></h4>
+        <p class="border w-100">
+            @Model.Description
+        </p>
+    </div>
+</div>
